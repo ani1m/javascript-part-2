@@ -21,17 +21,44 @@ literals). These objects will contain a name and email property.
 */
 
 var arrObjects = [ 
-    { name: "Toutou", email:"jaime@lestoutous.com"},
-    { name: "Pitouminou", email: "wheres@mypitou.com"},
-    { name: "Minou", email: "notcrazy@minou.com"}
+    { name: "Toutou", email:        "jaime@lestoutous.com"},
+    { name: "Pitouminou", email:    "wheres@mypitou.com"},
+    { name: "Minou", email:         "notcrazy@minou.com"}
     ];
     
 // Then, run some code that will sort your array by the longest name. 
 console.log(arrObjects.sort(function(n1,n2)
-{return n2.name.length - n1.name.length})); 
+
+{return n2.name.length - n1.name.length}
+)); 
 
 /* Then, run some code that will sort your array by e-mail address in 
 alphabetical order. */
 console.log(arrObjects.sort(function(n1,n2)
-{return n1.email > n2.email}));
+
+{ return n1.email > n2.email }
+
+));
+
+/* 3
+Create a function that can be used with Array.prototype.map. This function 
+should take a number and return its square. 
+Then, use this function with map on an array of numbers to check the result.
+*/
+
+var numbers = [2,5,4,2,3,2];
+
+function squared (x) {
+    return x * x;
+}
+var newArr = numbers.map(squared);
+console.log(newArr);
+
+/*
+Create a function that can be used with Array.prototype.map. 
+This function should be able to take an object and square its “num” property. 
+Then, use this function with map on an array of objects each containming a “num” property.
+*/
+
+
 
