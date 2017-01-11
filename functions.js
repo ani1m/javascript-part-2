@@ -74,3 +74,42 @@ var arrObj = [
     var newNum = arrObj.map(objNum);
     console.log(newNum);
     
+/* 5
+Create a function called operationMaker that takes only a string called 
+operation as argument. This string could be “add”, “subtract”, “mult” or “div”. 
+Your function will return a function that will take two numbers and return 
+the result of running operation on these numbers. 
+The end result should let me do something like this:
+*/
+
+
+function operationMaker(operation) {
+    switch(operation) {
+        case "add": 
+            return function(a,b){ return a+b };
+        
+        case "subtract": 
+            return function(a,b) { return a-b };
+        
+        case "mult": 
+            return function(a,b){ return a*b };
+       
+       case "div": 
+            return  function(a,b){return a/b};
+       
+       default: return NaN;
+      
+    }
+}
+var add = operationMaker("add");
+var sub = operationMaker("subtract");
+var mult = operationMaker("mult");
+var div = operationMaker("div");
+
+
+console.log(add);
+var sum=add(5,10);
+console.log(sum);
+
+
+    
