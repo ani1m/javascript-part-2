@@ -1,4 +1,4 @@
-/*
+/* 1
 Create a function that can be used with sort. This function should take two 
 strings, and return a value that sort can use to determine which is the 
 longest string.
@@ -15,6 +15,23 @@ var result = words.sort(longWord);
 console.log(result);
 
 
+/* 2
+Create an array of objects (don’t need to use new here, just regular object 
+literals). These objects will contain a name and email property. 
+*/
 
+var arrObjects = [ 
+    { name: "Toutou", email:"jaime@lestoutous.com"},
+    { name: "Pitouminou", email: "wheres@mypitou.com"},
+    { name: "Minou", email: "notcrazy@minou.com"}
+    ];
+    
+// Then, run some code that will sort your array by the longest name. 
+console.log(arrObjects.sort(function(n1,n2)
+{return n2.name.length - n1.name.length})); 
 
+/* Then, run some code that will sort your array by e-mail address in 
+alphabetical order. */
+console.log(arrObjects.sort(function(n1,n2)
+{return n1.email > n2.email}));
 
